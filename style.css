@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.circle {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 18%, 72%);
+  cursor: pointer;
+}
+.header {
+  width: 100%;
+  height: 16rem;
+  background-image: url("./images/bg-mobile-light.jpg");
+  background-size: cover;
+  padding: 3.5rem 0 0;
+}
+.header-dark {
+  background-image: url("./images/bg-mobile-dark.jpg");
+}
+.header .container {
+  width: 90%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+.header .logo {
+  color: white;
+}
+.header img {
+  cursor: pointer;
+}
+.header .sun {
+  display: none;
+}
+.main {
+  width: 90%;
+  max-width: 700px;
+  margin: -7rem auto 0;
+
+  border-radius: 0.4rem;
+}
+.form {
+  position: relative;
+}
+.main input {
+  width: 100%;
+  background-color: white;
+  padding: 1rem 1rem 1rem 3rem;
+  border: none;
+  border-radius: 0.4rem;
+}
+.main input:focus {
+  outline: none;
+}
+.form .circle {
+  position: absolute;
+  top: 0.8rem;
+  left: 1rem;
+}
+.todo-list,
+.states {
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+}
+.todo-list .todo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid hsl(234, 39%, 85%);
+  cursor: pointer;
+  position: relative;
+}
+.todo-list .todo .circle {
+  padding: 0.2rem 0.3rem;
+}
+.todo-list .todo .circle-checked {
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.todo-list .todo .check {
+  max-width: 100%;
+  display: none;
+}
+.todo-list .todo .checked {
+  display: inline;
+}
+.todo-list .todo .task {
+  color: hsl(234, 11%, 52%);
+}
+.todo-list .todo .task-crossed {
+  text-decoration: line-through;
+}
+.todo-list .todo .delete {
+  position: absolute;
+  right: 1rem;
+  display: none;
+}
+.todo-list .todo .delete-filter {
+  filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(346deg)
+    brightness(118%) contrast(101%);
+}
+.todo-list .todo:hover .delete {
+  display: inline;
+}
+.todo-list .items-clear {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: hsl(233, 11%, 84%);
+  border-radius: 0.4rem;
+}
+.items-clear p {
+  cursor: pointer;
+}
+.states {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  color: hsl(234, 11%, 52%);
+}
+.states p:hover {
+  cursor: pointer;
+  color: hsl(237, 73%, 58%);
+}
+
+@media (min-width: 700px) {
+  .header {
+    background-image: url("./images/bg-desktop-light.jpg");
+  }
+  .header-dark {
+    background-image: url("./images/bg-desktop-dark.jpg");
+  }
+  .states {
+    margin-top: -3rem;
+    z-index: -1;
+    box-shadow: 0 0 0 0;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      hr
+      ef="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Commissioner:wght@400;500;700&family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Todo app</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">TODO</h1>
+        <img src="./images/icon-sun.svg" alt="icon-sun" class="sun" />
+        <img src="./images/icon-moon.svg" alt="icon-moon" class="moon" />
+      </div>
+    </header>
+    <main class="main">
+      <form class="form">
+        <input type="text" placeholder="Create a new todo... and press enter" />
+        <div class="circle"></div>
+      </form>
+      <section class="todo-list">
+        <div class="todos"></div>
+        <div class="items-clear">
+          <p class="items-left"><span></span> items left</p>
+          <p class="clear">clear completed</p>
+        </div>
+      </section>
+      <section class="states">
+        <p class="all">All</p>
+        <p class="active">Active</p>
+        <p class="completed">completed</p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
